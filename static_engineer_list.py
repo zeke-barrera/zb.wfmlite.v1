@@ -4,18 +4,11 @@ Created on Jan 22, 2017
 @author: ebarrer
 '''
 
-#Create and engineer class
+#Create an engineer class
 class Engineer:
-    def __init__(self, login, bucket, location, role):
+    def __init__(self, name, login, whid, role, bucket):
+        self.name = name
         self.login = login
-        self.bucket = bucket
-        self.location = location
+        self.whid = whid
         self.role = role
-
-eng_list = []
-
-def list_engineers(eng_list):
-    for i in range(len(eng_list)):
-        print "Login: %20s Bucket: %20s Location: %20s Role: %20s" % (eng_list[i].login, eng_list[i].bucket, eng_list[i].location, eng_list[i].role)
-        
-list_engineers(eng_list)
+        self.bucket = bucket
